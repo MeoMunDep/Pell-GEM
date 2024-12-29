@@ -30,22 +30,16 @@ fi
 create_default_configs() {
     cat > configs.json << EOL
 {
-    "timeZone": "en-US",
-    "rotateProxy": false,
-    "skipInvalidProxy": false,
-    "proxyRotationInterval": 2,
-    "delayEachAccount": [5, 8],
-    "timeToRestartAllAccounts": 300,
-    "howManyAccountsRunInOneTime": 10,
-    "doTasks": true,
-    "playGames": true,
-    "referralCode": ""
+  "limit": 100,
+  "countdown": 300,
+  "country_time": "en-US",
+  "delayEachAccount": [1, 81]
 }
 EOL
 }
 
 check_configs() {
-    if ! node -e "const cfg=require('./configs.json');if(typeof cfg.howManyAccountsRunInOneTime !== 'number' || cfg.howManyAccountsRunInOneTime < 1) throw new Error('Invalid config');" 2>/dev/null; then
+    if ! node -e "const cfg=require('./configs.json');if(typeof cfg.limit !== 'number' || cfg.limit < 1) throw new Error('Invalid config');" 2>/dev/null; then
         print_red "Invalid configuration detected. Resetting to default values..."
         create_default_configs
         print_green "Configuration reset completed."
