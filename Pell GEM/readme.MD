@@ -44,8 +44,11 @@ To get started with the bot, follow these steps:
   "limit": 100,
   "countdown": 300,
   "country_time": "en-US",
-  "delayEachAccount": [1, 81]
+  "delayEachAccount": [1, 1],
+  "referralCode": "gmzqAAY6",
+  "doTasks": true
 }
+
 
 ```
 
@@ -58,6 +61,9 @@ query_id.../user...
 ```
 
 ### 3. `wallets.txt` 💼 - Cannot update yet.
+
+- Wallets generator: [Link](https://github.com/MeoMunDep/Automatic-Ultimate-Create-Wallets-for-Airdrop)
+
 
 ```txt - wallet address
 abc...xyz
@@ -77,6 +83,6 @@ socks5://user:password@host:port
 💡 Usage:
 
 > You need to `cd` to the file after extract it
-> To run the bot, use the following command: `cd "pell gem-main/pell gem"; node bot`
+> To run the bot, use the following command: `cd "pell gem-main/pell gem"; node meomundep`
 
 🎇Enjoy!
